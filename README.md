@@ -16,6 +16,8 @@
 npm i # または pnpm i を実行
 npm run dev # 開発サーバーを立ち上げる (ターミナル : o →でブラウザが開く ,h → ヘルプ)
 npm run build # htdocsフォルダ内にコンパイル
+
+npm run rollup # ハンドルファイルの可視化
 ```
 
 ## チャンクファイル概要
