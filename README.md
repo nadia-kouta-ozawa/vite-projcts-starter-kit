@@ -43,7 +43,7 @@ jsconfig.json	                  プロジェクト全体のJSに関する設定�
 package.json	                  依存パッケージなどの設定ファイル
 vite.config.js	                Viteの設定ファイル
 node_modules/	                  プロジェクトにインストールしたパッケージ
-dist/                           npm run build した先のフォルダ
+htdocs/                           npm run build した先のフォルダ
 public/	                        画像や動画、フォントファイルなど
 src/                            スクリプトが格納されるフォルダ
 │
