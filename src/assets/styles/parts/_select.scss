@@ -1,0 +1,56 @@
+@use "sass:math";
+@use "../globals" as *;
+@use "general";
+@use "fonts";
+
+.c-selectbox {
+  position: relative;
+}
+
+.c-selectbox::before,
+.c-selectbox::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.c-selectbox::before {
+  display: inline-block;
+  right: 0;
+  width: 2.8em;
+  line-height: 1.4;
+  background-color: #f4f4f4;
+}
+
+.c-selectbox::after {
+
+  position: absolute;
+  top: 50%;
+  right: 1.4em;
+  transform: translate(50%, -50%) rotate(45deg);
+  width: .6em;
+  height: .6em;
+  border-bottom: 3px solid var(--c-black);
+  border-right: 3px solid var(--c-black);
+
+}
+
+.c-selectbox select {
+  appearance: none;
+  min-width: 230px;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  border: none;
+
+  background-color: #f4f4f4;
+  line-height: 1.4;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.c-selectbox select:focus {
+  outline: 2px solid rgb(0, 95, 204);
+  border-radius: 1px;
+}

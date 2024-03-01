@@ -1,0 +1,44 @@
+@use "../globals" as *;
+@use "fonts";
+
+
+.l-main {
+  flex: 1;
+  height: 800px;
+  background-color: var(--c-gray);
+  @include mq("lg") {
+    max-width: 800px;
+  }
+}
+
+
+.c-breadcrumb {
+  margin-top: 8px;
+  &__list {
+    a {
+      color: var(--c-main);
+      text-decoration: underline;
+      transition: all .3s;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__item {
+    @extend .font-10-12;
+    position: relative;
+    &:last-child {
+      margin-left: 4px;
+      &:before{
+        content: "＞";
+        color: var(--c-black);
+        margin-right: 1px;
+      }
+    }
+    // &:last-of-type {
+    //   content: "＞";
+    //   position: absolute;
+    //   left: 0;
+    // }
+  }
+}

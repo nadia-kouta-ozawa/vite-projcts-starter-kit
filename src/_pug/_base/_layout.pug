@@ -1,0 +1,24 @@
+block vars
+doctype html
+html(lang="ja" prefix="og: http://ogp.me/ns#")
+  head
+
+    include _head
+
+  body(class="")
+    .wrapper#top
+      block header
+
+      #global-container
+
+        main.l-main#main
+          block contents
+
+      button(data-scroll="top").scroll-btn
+
+      block footer
+
+
+
+
+

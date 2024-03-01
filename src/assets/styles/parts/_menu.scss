@@ -1,0 +1,69 @@
+@use "../globals" as *;
+@use "fonts";
+
+// header ハンバーガーメニュスタイル
+@media (max-width: $mq-max-bp) {
+
+  #overlay-button {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 26px 14px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+    width: 56px;
+    height: 56px;
+  }
+  #overlay-button span {
+    height: 2px;
+    width: 24px;
+    border-radius: 2px;
+    background-color: var(--c-black);
+    position: relative;
+    display: block;
+    transition: all .1s ease-in-out;
+  }
+  #overlay-button span:before {
+    top: -8px;
+    visibility: visible;
+  }
+  #overlay-button span:after {
+    top: 8px;
+  }
+  #overlay-button span:before, #overlay-button span:after {
+    height: 2px;
+    width: 24px;
+    border-radius: 2px;
+    background-color: var(--c-black);
+    position: absolute;
+    content: "";
+    transition: all .1s ease-in-out;
+  }
+  #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+    background: var(--c-black);
+  }
+
+  input[type=checkbox] {
+    display: none;
+
+  }
+
+  input[type=checkbox]:checked ~ #overlay {
+    visibility: visible;
+  }
+
+  input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+    background: transparent;
+
+
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+}

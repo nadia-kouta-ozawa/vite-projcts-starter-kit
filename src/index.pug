@@ -1,0 +1,19 @@
+extends _pug/_base/_layout
+
+
+block vars
+  include _pug/_base/_settings
+  - let key = "top"
+  - let page = pages[key]
+
+
+block header
+  include _pug/_includes/organisms/_header
+
+block contents
+  #page-container(data-page="home").top
+    img(src=`${imgPath}/common/demo.jpg`, alt="")
+    | top
+
+block footer
+  include _pug/_includes/organisms/_footer

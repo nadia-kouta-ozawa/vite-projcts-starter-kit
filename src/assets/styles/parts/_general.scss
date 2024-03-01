@@ -1,0 +1,47 @@
+/*
+ * レイアウト用ファイル
+ */
+@use "sass:math";
+@use "../globals" as *;
+@use "fonts" as *;
+
+
+.content-width {
+  width: min(100% - (24px * 2), 1100px);
+  margin-inline: auto;
+
+}
+
+
+.wrapper {
+  background-color: var(--c-gray);
+  padding-top: 5em;
+  margin-top: -5em;
+}
+
+.container {
+  @extend .content-width;
+}
+
+#global-container {
+  @extend .content-width;
+  display: flex;
+  margin-top: 56px;
+  flex-direction: column;
+  gap:40px;
+  @include mq("lg") {
+    margin-top: var(--height80);
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-block: 40px;
+  }
+}
+
+#page-container {
+  opacity: 1;
+}
+
+
+.text-center {
+  text-align: center;
+}
