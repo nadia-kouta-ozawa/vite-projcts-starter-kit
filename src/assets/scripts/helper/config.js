@@ -11,8 +11,6 @@ const config = {
   prefix: {
     page: "page",
     mouse: "mouse",
-    feature: "feature",
-    function: "function",
     tab: "tab",
     scroll: "scroll",
   },
@@ -27,7 +25,7 @@ const config = {
     scroll: "scroll",
   },
   // モバイル判定 viewport.isMobile() の設定（breakpointより小さい場合はモバイル画面とする）
-  breakpoint: 965
+  breakpoint: 768
 };
 
 export { config };
