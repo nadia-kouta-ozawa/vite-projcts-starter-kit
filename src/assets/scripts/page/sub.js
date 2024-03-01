@@ -8,7 +8,7 @@ import { INode } from "../helper";
 
 export default function ({
 }) {
-  console.log("home ページ!");
+  console.log("sub ページ!");
 
 }
 
