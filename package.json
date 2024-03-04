@@ -35,6 +35,7 @@
     "production": [
       ">0.5%",
       "not dead",
+      "iOS >= 10.0",
       "not op_mini all"
     ],
     "development": [
