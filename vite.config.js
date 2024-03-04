@@ -7,6 +7,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import globule from "globule";
 
 const root = "src";
+const dist = "htdocs"
 const distAssetsFolder = "assets"
 const htmlFiles = globule.find('src/**/*.pug', {
   ignore: [
@@ -41,7 +42,7 @@ export default defineConfig(({ mode }) => {
       devSourcemap: true,
     },
     build: {
-      outDir: resolve(root, "../htdocs"),
+      outDir: resolve(root, `../${dist}`),
       emptyOutDir: true,
       minify: true,
       chunkSizeWarningLimit: 1000,
