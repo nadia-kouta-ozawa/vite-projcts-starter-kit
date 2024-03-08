@@ -95,3 +95,15 @@ src/                            スクリプトが格納されるフォルダ
     └─vendors                   サードパーティ製スタイル置き場
             css-reset.css       Reset CSS
 ```
+
+/public/assets/images/ディレクトリ内の画像ファイルを再帰的に JPG、PNG 形式全てを webp に変換したい場合
+
+```bash
+./webp.sh # シェルコマンド
+```
+
+wordpress 構築
+
+```bash
+dokcer-compose up -d #wordpress生成
+```
