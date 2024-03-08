@@ -14,13 +14,17 @@ export async function init() {
   try {
     const pageEl = INode.getElement(config.$.pageContainer);
     const pageType = INode.getDS(pageEl, config.prefix.page);
+    const pageTypeFlag = INode.hasDS(pageEl, config.prefix.page);
+
 
 
     // console.log(window.debug, "window.debugモード");
     // ページ属性（data-page）をキーにしたページ毎の制御の初期化
-    await import(`./page/${pageType}.js`).then(({ default: init }) => {
-      return init({ menu , tab, scroll });
-    });
+    if(pageTypeFlag){
+      await import(`./page/${pageType}.js`).then(({ default: init }) => {
+        return init({ menu , tab, scroll });
+      });
+    }
 
     // menuの初期化
     menu.init();
