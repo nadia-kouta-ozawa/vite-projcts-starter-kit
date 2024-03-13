@@ -38,9 +38,6 @@
 // 注意：getPcVw()とgetSpVw()関数の$viewportの値をデザインデータに合わせること
 // --------------------------------------------
 
-@function px($num){
-  @return 100 * calc($num / 1920);
-}
 
 @function vwPC($num, $width){
   @return 100vw * calc($num / $width);
