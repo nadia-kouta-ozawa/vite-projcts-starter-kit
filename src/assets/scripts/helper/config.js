@@ -5,7 +5,7 @@ const config = {
   // HTML内の主要なID属性の設定（styles/parts/_common.scss内のセレクタも合わせて要変更）
   $: {
     globalContainer: "#global-container",
-    pageContainer: "#page-container",
+    pageContainer: ".page-container",
   },
   // HTML内のdata-〇〇に指定する名前の設定
   prefix: {
