@@ -20,7 +20,10 @@ meta(property="og:description", content=page.description)
 meta(property="og:url", content=page.url)
 meta(property="og:image", content=page.ogp)
 meta(property="og:type", content="article")
-link(rel="shortcut icon" href="/biz_assets/images/common/favicon.ico")
+
+link(rel="icon" sizes="192x192" href=page.meta.favicon type="image/svg+xml")
+link(rel="shortcut icon" href=page.meta.favicon type="image/svg+xml")
+link(rel="apple-touch-icon" href=page.meta.favicon type="image/svg+xml")
 
 meta(name="twitter:card", content="summary_large_image")
 meta(name="twitter:title", content=page.title)

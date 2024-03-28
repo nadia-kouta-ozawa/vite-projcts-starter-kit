@@ -1,28 +1,43 @@
 - let imgPath = "/assets/images"
 - let pdfPath = "/assets/pdf"
 -
+  let meta = {
+    sitename    : '',
+    description : '',
+    keywords    : '',
+    url         : '',
+    ogp         : '',
+    sharetext   : '',
+    hashtag     : '',
+    copyright   : '',
+    favicon     : '',
+  }
+
+-
   pages = {
     top: {
-      title       : '',
-      sitename    : '',
-      description : '',
-      keywords    : '',
-      url         : '',
-      ogp         : '',
-      sharetext   : '',
-      hashtag     : '',
-      copyright   : ''
+      title       : 'トップページ' + ' | ' + meta.sitename,
+      meta
     },
     about: {
-      title       : '',
-      sitename    : '',
-      description : '',
-      keywords    : '',
-      url         : '',
-      ogp         : '',
-      sharetext   : '',
-      hashtag     : '',
-      copyright   : ''
+      title       : '' + ' | ' + meta.sitename,
+      meta
+    },
+    privacy: {
+      title       : 'プライバシー・ポリシー' + ' | ' + meta.sitename,
+      meta
+    },
+    contact: {
+      title       : 'お問い合わせ' + ' | ' + meta.sitename,
+      meta
+    },
+    jirei: {
+      title       : '導入事例' + ' | ' + meta.sitename,
+      meta
+    },
+    single: {
+      title       : 'ニュース' + ' | ' + meta.sitename,
+      meta
     },
 
   }
